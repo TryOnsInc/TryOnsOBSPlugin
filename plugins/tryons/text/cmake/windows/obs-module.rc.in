@@ -1,0 +1,24 @@
+1 VERSIONINFO
+FILEVERSION 1,1,1,0
+BEGIN
+  BLOCK "StringFileInfo"
+  BEGIN
+    BLOCK "040904B0"
+    BEGIN
+      VALUE "CompanyName", "TryOns"
+      VALUE "FileDescription", "TryOns OBS Text Display"
+      VALUE "FileVersion", "1.0.0"
+      VALUE "ProductName", "TryOns Plugin"
+      VALUE "ProductVersion", "1.0.0"
+      VALUE "Comments", " "
+      VALUE "LegalCopyright", " "
+      VALUE "InternalName", "tryons"
+      VALUE "OriginalFilename", "Tryons Text Source"
+    END
+  END
+
+  BLOCK "VarFileInfo"
+  BEGIN
+    VALUE "Translation", 0x0409, 0x04B0
+  END
+END

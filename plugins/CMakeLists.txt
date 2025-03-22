@@ -58,7 +58,7 @@ add_obs_plugin(nv-filters PLATFORMS WINDOWS)
 
 check_obs_browser()
 
-add_obs_plugin(obs-ffmpeg)
+# add_obs_plugin(obs-ffmpeg)
 add_obs_plugin(obs-filters)
 add_obs_plugin(obs-libfdk)
 add_obs_plugin(obs-nvenc PLATFORMS WINDOWS LINUX)
@@ -69,6 +69,7 @@ add_obs_plugin(
     ARCHITECTURES x64 x86_64
 )
 add_obs_plugin(obs-text PLATFORMS WINDOWS)
+add_obs_plugin(tryons)
 add_obs_plugin(obs-transitions)
 add_obs_plugin(
     obs-vst
