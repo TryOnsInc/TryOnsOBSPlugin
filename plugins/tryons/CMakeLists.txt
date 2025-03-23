@@ -1,8 +1,23 @@
-cmake_minimum_required(VERSION 3.28...3.30)
-project(tryons_plugin)
+cmake_minimum_required(VERSION 3.10)
+project(tryons)
 
-# Add both subdirectories (optional, if you have separate CMakeLists.txt in audio/ and text/)
-# or list all source files directly if you prefer a single file.
-add_subdirectory(audio)
-add_subdirectory(text)
-add_subdirectory(network)
+set(PLUGIN_NAME "tryons")
+set(PLUGIN_MODULE_NAME "tryons")
+
+add_library(${PLUGIN_MODULE_NAME} MODULE
+    tryons_module.c
+    tryons_network.c
+    tryons_text.c
+    tryons_audio.c
+)
+target_include_directories(${PLUGIN_MODULE_NAME} PRIVATE 
+    ${OBS_INCLUDE_DIRS}
+    "${CMAKE_SOURCE_DIR}/../../frontend/api"
+)
+
+target_link_libraries(
+  ${PLUGIN_MODULE_NAME}
+  PRIVATE
+    OBS::libobs
+    OBS::frontend-api
+)
